@@ -1,0 +1,7 @@
+emailField=email
+passwordField=password
+submitButton=//button[@type='submit']
+emptyEmail=//p[@id='email-helper-text']
+emptyPassword=//p[@id='password-helper-text']
+cormail$invpass=//div[contains(@class, 'MuiAlert-message') and contains(text(), 'Invalid email or password.')]
+walletlink=//a[@href='/wallet' and contains(@class, '_navLink')]

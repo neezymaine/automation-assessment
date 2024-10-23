@@ -1,0 +1,4 @@
+emailField=email
+passwordField=password
+submitButton=//button[@type='submit']
+emptyPassword=//p[@class='errorText' and contains(text(),'Enter your email address')]

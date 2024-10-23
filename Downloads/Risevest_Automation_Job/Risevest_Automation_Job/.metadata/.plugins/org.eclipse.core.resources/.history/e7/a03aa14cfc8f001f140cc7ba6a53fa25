@@ -1,0 +1,5 @@
+emailField=email
+passwordField=password
+submitButton=//button[@type='submit']
+emptyEmail=//p[@id='email-helper-text']
+emptyPassword=//p[@id='password-helper-text']

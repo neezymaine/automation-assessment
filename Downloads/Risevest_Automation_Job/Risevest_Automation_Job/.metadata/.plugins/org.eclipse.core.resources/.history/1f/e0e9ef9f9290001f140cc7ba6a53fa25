@@ -1,0 +1,17 @@
+emailField=email
+passwordField=password
+submitButton=//button[@type='submit']
+emptyEmail=//p[@id='email-helper-text']
+emptyPassword=//p[@id='password-helper-text']
+cormail$invpass=//div[contains(@class, 'MuiAlert-message') and contains(text(), 'Invalid email or password.')]
+walletlink=//a[@href='/wallet' and contains(@class, '_navLink')]
+hidebal=//button[@class='text-primary']//svg[@data-testid='VisibilityOffIcon']
+plan=//a[contains(.,'Plans')]
+newplan=//a[contains(@href, '/plans/new/stocks')]
+GS_button=//button[contains(@class, 'MuiButtonBase-root') and contains(@class, 'MuiButton-containedPrimary') and contains(@class, 'MuiButton-fullWidth')]
+cont_buttn=//button[@data-test-id='continue']
+plan_box=name
+submit_bttn=//button[@data-test-id='create-plan-button']
+emptyplanerror=//p[@id='name-helper-text']
+VP=//a[@class='_planCard_1rcc3_1 bg-primary text-white' and @href='/plans/de48bfed-ecf1-4538-9f34-bf312eed679e']
+
