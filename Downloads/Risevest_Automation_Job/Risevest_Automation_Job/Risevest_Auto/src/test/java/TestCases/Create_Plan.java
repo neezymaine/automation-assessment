@@ -1,23 +1,18 @@
 package TestCases;
 
-import java.io.File;
-import java.nio.file.Paths;
+
+
 import java.time.Duration;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Random;
-import java.util.Set;
-import java.util.UUID;
-import org.openqa.selenium.NoSuchElementException;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.By;
-import org.openqa.selenium.ElementClickInterceptedException;
+
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
+
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
+
 import org.openqa.selenium.support.ui.WebDriverWait;
 import BaseTest.BaseTest;
 
@@ -106,7 +101,7 @@ public class Create_Plan extends BaseTest {
 		WebElement element3 = wait7
 				.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("submit_bttn"))));
 		element3.click();
-
+//soft assert in this test is for validation when making a negative checks during the automation, softassert ,i nstead of Assert, is used in case the test fails so it plows ahead. 
 		SoftAssert softassert = new SoftAssert();
 		String actual_error = driver.findElement(By.xpath(loc.getProperty("emptyplanerror"))).getText();
 		String expected_error = "Enter a plan name to continue";

@@ -18,7 +18,7 @@ public class Wallet extends BaseTest {
 
 	@Test(priority = 1)
 
-	// access wallet and view wallet balance
+	// to access wallet and view wallet balance
 	public void wallet_balance_visible() {
 
 		driver.manage().window().maximize();

@@ -1,23 +1,15 @@
 package TestCases;
 
-import java.io.File;
-import java.nio.file.Paths;
+
 import java.time.Duration;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Random;
-import java.util.Set;
-import java.util.UUID;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.JavascriptExecutor;
+
 import org.openqa.selenium.By;
-import org.openqa.selenium.ElementClickInterceptedException;
+
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
+
 import org.openqa.selenium.support.ui.WebDriverWait;
 import BaseTest.BaseTest;
 
@@ -55,6 +47,8 @@ public class LoginTest extends BaseTest {
 				.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("submitButton"))));
 		submitButton.click();
 
+
+		//soft assert in this test is for validation when making a negative checks during the automation, softassert ,i nstead of Assert, is used in case the test fails so it plows ahead. 
 		SoftAssert softassert = new SoftAssert();
 		String actual_error = driver.findElement(By.xpath(loc.getProperty("emptyEmail"))).getText();
 		String expected_error = "Enter your email address";
@@ -78,6 +72,7 @@ public class LoginTest extends BaseTest {
 				.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("submitButton"))));
 		submitButton.click();
 
+		//soft assert in this test is for validation when making a negative checks during the automation, softassert ,i nstead of Assert, is used in case the test fails so it plows ahead. 
 		SoftAssert softassert = new SoftAssert();
 		String actual_error = driver.findElement(By.xpath(loc.getProperty("emptyPassword"))).getText();
 		String expected_error = "Enter your password";
@@ -100,7 +95,7 @@ public class LoginTest extends BaseTest {
 		WebElement submitButton = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath(loc.getProperty("submitButton"))));
 		submitButton.click();
-		
+		//soft assert in this test is for validation when making a negative checks during the automation, softassert ,i nstead of Assert, is used in case the test fails so it plows ahead. 
 
 		SoftAssert softassert1 = new SoftAssert();
 		String actual_error1 = driver.findElement(By.xpath(loc.getProperty("emptyEmail"))).getText();
@@ -108,7 +103,7 @@ public class LoginTest extends BaseTest {
 		softassert1.assertEquals(actual_error1, expected_error1);
 		softassert1.assertAll();
 
-
+//double assertion is used because there were two errror messages when this check was made
 		SoftAssert softassert = new SoftAssert();
 		String actual_error = driver.findElement(By.xpath(loc.getProperty("emptyPassword"))).getText();
 		String expected_error = "Enter your password";
