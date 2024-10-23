@@ -1,23 +1,16 @@
 package TestCases;
 
-import java.io.File;
-import java.nio.file.Paths;
+
 import java.time.Duration;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Random;
-import java.util.Set;
-import java.util.UUID;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.JavascriptExecutor;
+
 import org.openqa.selenium.By;
-import org.openqa.selenium.ElementClickInterceptedException;
+
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
+
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
+
 import org.openqa.selenium.support.ui.WebDriverWait;
 import BaseTest.BaseTest;
 
